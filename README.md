@@ -1,57 +1,26 @@
 # Storefront Backend Project
 
-## Table of Contents
-
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Setup](#setup)
-- [Features](#features)
-
-## Getting Started
-
-This repo contains a basic Node and Express app to get you started in constructing an API. To get started, clone this repo and run `yarn` in your terminal at the project root.
-
-### The HTTP verbs used
-
-- GET: To retrive resources
-- POST: TO create resources
-- PATCH: To Update resources
-- DELETE: To delete resources
-
-## Installation
+## 1. Installation
 
 ```javascript
 npm install
 ```
 
-## Working script
-
-- Start server on production: `npm start`
-- Start server on development: `npm run dev`
-- Start server on development: `npm run dev`
-- Start server on watch: `npm run watch`
-- Build tsc: `npm run build`
-- Run jasmine text: `npm run jasmine`
-- Run test and build: `npm test`
-- Run database migration: `npm run up`
-- Run database migration: `npm run down`
-- Linting: `npm run lint`
-- Format code using prettier: `npm run format`
-
-## Setup
+## 2. Setup
 
 1. On your local computer, create a new database, and note the credentials.
 2. Create two databases: 1. **storefront** and 2. **test_Storefront** for test.
+
 ```javascript
-make run-postgres
-make run-postgres-test
+make run-postgres // for production
+make run-postgres-test // for test
 ```
 
-## Prepare env
+## 3. Prepare env
 
 1. create a new .env file, copy the environment variables from .env.example and pastethem into .env file.
 
-## Migrate Database
+## 4. Migrate Database
 
 ```javascript
   // Create a tables with migrations
@@ -61,15 +30,18 @@ make run-postgres-test
   npm run down
 ```
 
-## Start the server
+## 5. Start the server
 
 ```javascript
-  npm run dev
+  npm run start
 ```
+server will be running on here
+http://localhost:3030
 
 ## test
 
 ```javascript
+// should run the test postgres database first (make run-postgres-test)
 npm test
 ```
 

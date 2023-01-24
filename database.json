@@ -4,7 +4,7 @@
     "host": "127.0.0.1",
     "post": 5432,
     "database": "storefront",
-    "user": "store",
+    "user": "postgres",
     "password": "qwert"
   },
   "test": {
@@ -12,7 +12,7 @@
     "host": "127.0.0.1",
     "post": 5432,
     "database": "test_Storefront",
-    "user": "store",
+    "user": "postgres",
     "password": "qwert"
   }
 }

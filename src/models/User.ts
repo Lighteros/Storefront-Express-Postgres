@@ -18,6 +18,7 @@ export class User {
       const userExistsSql = `SELECT username FROM users WHERE username = $1`;
       const sql = 'INSERT INTO users (username,firstname,lastname,password) VALUES($1, $2, $3, $4) RETURNING *';
       const connection = await Client.connect();
+      console.log("=============================")
       const data = await connection.query(userExistsSql, [username]);
       if (data.rows.length >= 1) {
         throw new BadRequest(`Username is in use`);

@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "start": "npm run build && node build/build.js",
+    "start": "npm run build && node build/server.js",
     "dev": "nodemon src/server.ts",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "teste": "cross-env NODE_ENV=test && npm run up && npm run build && npm run jasmine && npm run down",
-    "test": "set NODE_ENV=test && npx tsc && db-migrate --env test up && jasmine && db-migrate db:drop test",
+    "test": "export NODE_ENV=test && npx tsc && db-migrate --env test up && jasmine",
     "jasmine": "jasmine",
     "build": "npx tsc",
     "tsc": "tsc",
